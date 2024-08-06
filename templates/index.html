@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <ul>
+        <li><a href="{{ url_for('manage_users') }}">Manage Users</a></li>
+        <li><a href="{{ url_for('view_logs') }}">View Logs</a></li>
+        <li><a href="{{ url_for('user_info') }}">User Info</a></li>
+    </ul>
+</body>
+</html>

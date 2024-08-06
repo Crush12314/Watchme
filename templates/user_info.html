@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Info</title>
+</head>
+<body>
+    <h1>User Info</h1>
+    <form method="post">
+        <label for="user_id">User ID:</label>
+        <input type="text" id="user_id" name="user_id" required>
+        <br>
+        <button type="submit">Get Info</button>
+    </form>
+    {% if user_id %}
+        <p><strong>User ID:</strong> {{ user_id }}</p>
+        <p><strong>Username:</strong> {{ username }}</p>
+        <p><strong>Role:</strong> {{ role }}</p>
+        <p><strong>Approval Expiry Date:</strong> {{ expiry_date }}</p>
+        <p><strong>Remaining Approval Time:</strong> {{ remaining_time }}</p>
+    {% endif %}
+</body>
+</html>

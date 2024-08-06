@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Users</title>
+</head>
+<body>
+    <h1>Manage Users</h1>
+    <form method="post">
+        <label for="user_id">Admin ID:</label>
+        <input type="text" id="user_id" name="user_id" required>
+        <br>
+        <label for="user_to_remove">User to Remove:</label>
+        <input type="text" id="user_to_remove" name="user_to_remove">
+        <br>
+        <label for="duration">Duration (e.g., 1 hour, 2 days):</label>
+        <input type="text" id="duration" name="duration">
+        <br>
+        <button type="submit" name="action" value="add">Add User</button>
+        <button type="submit" name="action" value="remove">Remove User</button>
+    </form>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+</body>
+</html>
